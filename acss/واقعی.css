@@ -1,0 +1,162 @@
+
+/* ریست لازم */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* مرکز کردن صفحه */
+body {
+  height: 100vh;
+  background: white;
+  font-family: "Vazirmatn", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* باکس فرم */
+.form-box {
+  width: 350px;
+  background: white;   
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 90px  rgb(211, 116, 27);
+}
+
+/* عنوان */
+.form-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* لیبل‌ها */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* فیلدها */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 9px;
+  border: 1px 0vb rgb(0, 0, 0);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* افکت زمانی فیلد فوکوس می‌شود */
+ input:focus {
+  border-color: #6366f1;
+  box-shadow: 5px 5px 90px black;
+} 
+
+/* دکمه */
+button {
+  width: 100%;
+  padding: 10px;
+  background: rgb(217, 132, 52);
+  border: none;
+  color: beige;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#register-btn:hover {
+  background-color: #007FFF; 
+  transition: 0.3s;    
+  box-shadow: 1px 6px 89px #007FFF;
+}
+
+
+/* افکت هاور */
+button:hover {
+  background: #0000;
+}
+ body {
+    padding: 40px;
+    text-align: center;
+}
+.header-count {
+     max-width: 450px;
+    margin: 0 auto; 
+} 
+p {
+    font-size: 16px;
+    color: darkslategray;
+    margin: 0 auto 20px;
+}
+h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold; 
+}
+.btn {
+    border-radius: 26px;
+    background-color: black;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: red;
+    text-decoration: none;
+    margin-bottom: 4%;
+    display: inline-block;
+}
+ .gallery {
+    max-width: 900px;
+
+}
+.gallery  img {
+    width: 20%;
+    height: 200px;
+    margin: 0 1% 12px;
+     border-radius: 19px;
+     margin-bottom: 20px;
+    float: left;
+}
+    body {
+    padding: 40px;
+    text-align: center; 
+}
+.header-count {
+    max-width: 450px;
+    margin:  0 auto;
+}
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+ p { 
+    font-size: 16px;
+    margin: 0 auto 20px;
+    color: #57030c;
+
+ }
+ .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: aquamarine;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    
+ }
+ .gallery {
+    max-width: 900px;
+    margin: 0 1%;
+ }
+ .gallery img {
+    width: 22%;
+    margin: 0 1% 12px;
+    height: 160px;
+    border-radius: 24px;
+    float: left;
+ }  

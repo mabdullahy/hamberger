@@ -1,0 +1,102 @@
+body {
+  /* رنگ پس‌زمینه اصلی صفحه */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%; 
+  animation: gradientBG 15s ease infinite;
+  margin: 0; 
+  padding: 0;
+  font-family: 'Vazirmatn', sans-serif; 
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.food-item-large {
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+
+  border-radius: 15px;
+  box-shadow: 1px 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.food-image-animated {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: zoomIn 1.5s ease-out forwards;
+  transform-origin: center;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.food-name {
+  padding: 20px 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #2c3e50; 
+  font-family: 'Vazirmatn', sans-serif;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
+  margin: 10px auto; 
+  display: inline-block; 
+}
+
+/* استایل قیمت */
+.food-price {
+  padding: 0 15px 20px 15px;
+  font-size: 1.2em;
+  color: #e74c3c;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-size: 600% 600%; 
+  }
+  .food-item-large {
+    width: 90%;
+  }
+  .food-name {
+    font-size: 1.3em;
+  }
+  .food-price {
+    font-size: 1.1em;
+  }
+}
+.p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}

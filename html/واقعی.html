@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+        <link rel="stylesheet" href="acss/واقعی.css">
+</head>
+<body>
+
+
+<div class="form-box">
+  <h2>Login</h2>
+
+  <form>
+    <label>Name</label>
+    <input type="text" placeholder="inter the Name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Email">
+
+    <label>Password</label>
+    <input type="password" placeholder=" Password">
+
+    <button id="register-btn">Login </button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+{
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+        }
+        code {
+            font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: right;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: #856404;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>راهنمای جامع و به‌روز تگ‌های HTML5</h1>
+    <p class="note">
+        (بدون تگ‌های منسوخ)
+    </p>
+
+    <hr>
+
+    <h2>فصل 1: ساختار پایه صفحه HTML</h2>
+    <p>هر صفحه HTML با ساختار زیر شروع می‌شود:</p>
+
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fa"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;عنوان صفحه&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    محتوای شما اینجاست
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <p><strong>توضیح:</strong></p>
+    <ul>
+        <li><code>DOCTYPE</code> نوع سند را مشخص می‌کند.</li>
+        <li><code>html</code> ریشه سند است.</li>
+        <li><code>head</code> شامل اطلاعات متا و تنظیمات است.</li>
+        <li><code>body</code> شامل محتوای قابل مشاهده صفحه است.</li>
+    </ul>
+
+    <hr>
+
+    <h2>فصل 2: تگ‌های ساختاری (Semantic Layout)</h2>
+
+    <h3><code>header</code></h3>
+    <p>برای سرصفحه سایت یا یک بخش.</p>
+
+    <h3><code>nav</code></h3>
+    <p>برای منوهای ناوبری.</p>
+
+    <h3><code>main</code></h3>
+    <p>محتوای اصلی صفحه (فقط یکبار در هر صفحه).</p>
+
+    <h3><code>section</code></h3>
+    <p>یک بخش موضوعی از محتوا.</p>
+
+    <h3><code>article</code></h3>
+    <p>محتوای مستقل مثل مقاله یا خبر.</p>
+
+    <h3><code>aside</code></h3>
+    <p>محتوای جانبی مثل سایدبار.</p>
+
+    <h3><code>footer</code></h3>
+    <p>پاصفحه.</p>
+
+    <h3><code>div</code></h3>
+    <p>ظرف عمومی برای گروه‌بندی عناصر.</p>
+
+    <p><strong>مثال کامل:</strong></p>
+    <pre><code class="language-html">
+&lt;header&gt;&lt;h1&gt;وبسایت من&lt;/h1&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;a href="#"&gt;خانه&lt;/a&gt;&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;عنوان مقاله&lt;/h2&gt;
+      &lt;p&gt;متن مقاله...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;&copy; 2026&lt;/footer&gt;
+    </code></pre>
+
+    <hr>
+
+    <h2>فصل 3: تگ‌های متنی</h2>
+
+    <h3>عناوین</h3>
+    <p><code>&lt;h1&gt;</code> تا <code>&lt;h6&gt;</code></p>
+
+    <h3>پاراگراف</h3>
+    <p><code>&lt;p&gt;</code></p>
+
+    <h3>تاکید و اهمیت</h3>
+    <p><code>&lt;strong&gt;</code> (اهمیت بالا)</p>
+    <p><code>&lt;em&gt;</code> (تاکید صوتی)</p>
+
+    <h3>جداکننده‌ها</h3>
+    <p><code>&lt;br&gt;</code> (شکست خط)</p>
+    <p><code>&lt;hr&gt;</code> (خط افقی)</p>
+
+    <h3>نمایش کد</h3>
+    <p><code>&lt;code&gt;</code> (برای تکه‌های کد)</p>
+    <p><code>&lt;pre&gt;</code> (برای بلوک‌های کد با فرمت‌بندی حفظ شده)</p>
+    <pre><code>این یک بلوک کد است.
+    که فرمت آن حفظ می‌شود.</code></pre>
+
+    <h3>نقل قول</h3>
+    <p><code>&lt;blockquote&gt;</code> (نقل قول طولانی)</p>
+    <p><code>&lt;q&gt;</code> (نقل قول کوتاه)</p>
+
+    <h3>مخفف</h3>
+    <p><code>&lt;abbr&gt;</code> (مخفف‌ها و اختصارات)</p>
+    <p>مثال: <abbr title="HyperText Markup Language">HTML</abbr></p>
+
+    <h3>زمان</h3>
+    <p><code>&lt;time&gt;</code> (برای نمایش تاریخ و زمان)</p>
+    <p>مثال: <time datetime="2023-10-27">27 اکتبر 2023</time></p>
+
+    <hr>
+
+    <h2>فصل 4: لیست‌ها</h2>
+
+    <h3>لیست نامرتب</h3>
+    <pre><code class="language-html">
+&lt;ul&gt;
+  &lt;li&gt;مورد اول&lt;/li&gt;
+  &lt;li&gt;مورد دوم&lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre>
+
+    <h3>لیست مرتب</h3>
+    <pre><code class="language-html">
+&lt;ol&gt;
+  &lt;li&gt;مرحله اول&lt;/li&gt;
+  &lt;li&gt;مرحله دوم&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre>
+
+    <h3>لیست توضیحی</h3>
+    <pre><code class="language-html">
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;زبان ساختار صفحات وب&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;برای استایل‌دهی صفحات وب&lt;/dd&gt;
+&lt;/dl&gt;
+    </code></pre>
+
+    <hr>
+
+    <h2>فصل 5: جدول‌ها</h2>
+    <p>برای نمایش داده‌های جدولی.</p>
+
+    <pre><code class="language-html">
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;نام&lt;/th&gt;
+      &lt;th&gt;سن&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;علی&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;زهرا&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;پایان جدول&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+    </code></pre>
+
+    <p><strong>تگ‌ها:</strong></p>
+    <ul>
+        <li><code>table</code>: کانتینر اصلی جدول</li>
+        <li><code>thead</code>: سر جدول</li>
+        <li><code>tbody</code>: بدنه جدول (محتوای اصلی)</li>
+        <li><code>tfoot</code>: پاصفحه جدول</li>
+        <li><code>tr</code>: ردیف جدول</li>
+        <li><code>th</code>: سلول سرجدول (معمولاً پررنگ و وسط‌چین)</li>
+        <li><code>td</code>: سلول داده جدول</li>
+    </ul>
+
+    <hr>
+
+    <h2>فصل 6: رسانه‌ها</h2>
+
+    <h3>تصویر</h3>
+    <p><code>&lt;img&gt;</code></p>
+    <pre><code class="language-html">
+&lt;img src="image.jpg" alt="توضیح تصویر" width="300"&gt;
+    </code></pre>
+    <ul>
+        <li><code>src</code>: مسیر فایل تصویر.</li>
+        <li><code>alt</code>: متن جایگزین برای زمانی که تصویر بارگذاری نمی‌شود یا برای کاربران با صفحه خوان.</li>
+        <li><code>width</code> و <code>height</code>: ابعاد تصویر (بیشتر از طریق CSS توصیه می‌شود).</li>
+    </ul>
+
+    <h3>صوت</h3>
+    <p><code>&lt;audio&gt;</code></p>
+    <pre><code class="language-html">
+&lt;audio controls src="sound.mp3"&gt;
+  مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+&lt;/audio&gt;
+    </code></pre>
+    <p><code>controls</code>: دکمه‌های پخش، مکث و صدا را نمایش می‌دهد.</p>
+
+    <h3>ویدیو</h3>
+    <p><code>&lt;video&gt;</code></p>
+    <pre><code class="language-html">
+&lt;video controls width="600" height="300"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+&lt;/video&gt;
+    </code></pre>
+    <p><code>source</code>: امکان ارائه چندین فرمت ویدیو برای سازگاری بیشتر.</p>
+
+    <h3><code>canvas</code></h3>
+    <p>برای رسم تصاویر و گرافیک‌ها با استفاده از جاوااسکریپت.</p>
+    <pre><code class="language-html">
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+    </code></pre>
+
+    <h3><code>svg</code></h3>
+    <p>برای گرافیک‌های برداری که مقیاس‌پذیر هستند و کیفیت خود را حفظ می‌کنند.</p>
+    <pre><code class="language-html">
+&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt;
+&lt;/svg&gt;
+    </code></pre>
+
+    <h3><code>picture</code></h3>
+    <p>برای ارائه تصاویر واکنش‌گرا (Responsive Images)، که به مرورگر اجازه می‌دهد مناسب‌ترین تصویر را بر اساس رزولوشن صفحه انتخاب کند.</p>
+    <pre><code class="language-html">
+&lt;picture&gt;
+  &lt;source srcset="large-image.jpg" media="(min-width: 1000px)"&gt;
+  &lt;source srcset="medium-image.jpg" media="(min-width: 600px)"&gt;
+  &lt;img src="small-image.jpg" alt="توضیح تصویر"&gt;
+&lt;/picture&gt;
+    </code></pre>
+
+    <hr>
+
+    <h2>فصل 7: فرم‌ها</h2>
+    <p>برای جمع‌آوری اطلاعات از کاربران.</p>
+
+    <pre><code class="language-html">
+&lt;form action="/submit" method="post"&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;نام:&lt;/label&gt;
+    &lt;input type="text" id="name" name="username" required&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;label for="email"&gt;ایمیل:&lt;/label&gt;
+    &lt;input type="email" id="email" name="useremail"&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;label for="message"&gt;پیام:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="message" name="usermessage" rows="4" cols="50"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;label for="options"&gt;انتخاب کنید:&lt;/label&gt;
+    &lt;select id="options" name="userchoice"&gt;
+      &lt;option value="1"&gt;گزینه 1&lt;/option&gt;
+      &lt;option value="2"&gt;گزینه 2&lt;/option&gt;
+      &lt;option value="3"&gt;گزینه 3&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;button type="submit"&gt;ارسال&lt;/button&gt;
+    &lt;button type="reset"&gt;بازنشانی&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+    </code></pre>
+
+    <p><strong>تگ‌ها و ویژگی‌های مهم فرم:</strong></p>
+    <ul>
+        <li><code>form</code>: کانتینر اصلی فرم.</li>
+        <li><code>action</code>: آدرس URL برای ارسال داده‌ها.</li>
+        <li><code>method</code>: متد HTTP (POST یا GET).</li>
+        <li><code>label</code>: برچسب برای عنصر ورودی (با ویژگی <code>for</code> به <code>input</code> مرتبط می‌شود).</li>
+        <li><code>input</code>: عنصر ورودی اصلی (انواع مختلفی دارد: text, email, password, number, checkbox, radio, submit, button, etc.).</li>
+        <li><code>textarea</code>: برای ورودی متن چندخطی.</li>
+        <li><code>select</code> و <code>option</code>: برای ایجاد لیست‌های کشویی.</li>
+        <li><code>button</code>: دکمه (submit, reset, button).</li>
+        <li><code>required</code>: برای اجباری کردن یک فیلد.</li>
+        <li><code>placeholder</code>: متن راهنما درون فیلد.</li>
+        <li><code>fieldset</code>: برای گروه‌بندی عناصر فرم.</li>
+        <li><code>legend</code>: عنوان برای <code>fieldset</code>.</li>
+        <li><code>datalist</code>: لیستی از گزینه‌های از پیش تعریف شده برای یک ورودی.</li>
+        <li><code>output</code>: برای نمایش نتیجه یک محاسبه.</li>
+    </ul>
+
+    <hr>
+
+    <h2>فصل 8: تگ‌های تعاملی HTML5</h2>
+
+    <h3><code>details</code> و <code>summary</code></h3>
+    <p>برای ایجاد بخش‌های قابل باز و بسته شدن (آکاردئون).</p>
+    <pre><code class="language-html">
+&lt;details&gt;
+  &lt;summary&gt;کلیک کنید تا ببینید&lt;/summary&gt;
+  &lt;p&gt;این متنی است که پنهان بود.&lt;/p&gt;
+&lt;/details&gt;
+    </code></pre>
+
+    <h3><code>dialog</code></h3>
+    <p>برای نمایش پنجره‌های محاوره‌ای (Modal dialogs).</p>
+    <pre><code class="language-html">
+&lt;dialog open&gt;
+  &lt;h3&gt;پنجره نمونه&lt;/h3&gt;
+  &lt;p&gt;این محتوای داخل پنجره است.&lt;/p&gt;
+  &lt;button onclick="document.querySelector('dialog').close()"&gt;بستن&lt;/button&gt;
+&lt;/dialog&gt;
+    </code></pre>
+    <p><code>open</code>: پنجره را به صورت پیش‌فرض باز نشان می‌دهد.</p>
+
+    <h3><code>progress</code></h3>
+    <p>برای نمایش پیشرفت یک وظیفه.</p>
+    <pre><code class="language-html">
+&lt;p&gt;پیشرفت دانلود:&lt;/p&gt;
+&lt;progress value="75" max="100"&gt;75%&lt;/progress&gt;
+    </code></pre>
+    <p><code>value</code>: مقدار فعلی، <code>max</code>: حداکثر مقدار.</p>
+
+    <h3><code>meter</code></h3>
+    <p>برای نمایش یک مقدار در یک محدوده مشخص (مانند میزان باتری، خوانایی متن).</p>
+    <pre><code class="language-html">
+&lt;p&gt;امتیاز کیفیت:&lt;/p&gt;
+&lt;meter value="0.7" min="0" max="1" low="0.3" high="0.8" optimum="0.9"&gt;70%&lt;/meter&gt;
+    </code></pre>
+    <p><code>value</code>، <code>min</code>، <code>max</code>، <code>low</code>، <code>high</code>، <code>optimum</code> پارامترهای آن هستند.</p>
+
+    <hr>
+
+    <h2>فصل 9: تگ‌های بخش head</h2>
+    <p>این تگ‌ها اطلاعات فراداده (metadata) و تنظیمات صفحه را در بر می‌گیرند و مستقیماً در صفحه نمایش داده نمی‌شوند.</p>
+
+    <ul>
+        <li><code>title</code>: عنوان صفحه که در تب مرورگر یا نتایج جستجو نمایش داده می‌شود.</li>
+        <li><code>meta</code>: اطلاعات فراداده مانند charset، viewport، description، keywords.</li>
+        <li><code>link</code>: برای اتصال فایل‌های خارجی مانند CSS یا Favicon.</li>
+        <li><code>style</code>: برای قرار دادن کدهای CSS مستقیماً در HTML.</li>
+        <li><code>script</code>: برای اتصال فایل‌های جاوااسکریپت یا نوشتن کد JS.</li>
+        <li><code>base</code>: تعیین URL پایه برای تمام لینک‌های نسبی در صفحه.</li>
+    </ul>
+
+    <p><strong>مثال:</strong></p>
+    <pre><code class="language-html">
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="description" content="راهنمای جامع تگ‌های HTML5، شامل تمامی تگ‌های استاندارد و کاربردی HTML5."&gt;
+  &lt;title&gt;راهنمای جامع تگ‌های HTML5&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+  &lt;script src="app.js" defer&gt;&lt;/script&gt;
+  &lt;base href="https://example.com/" target="_blank"&gt;
+&lt;/head&gt;
+    </code></pre>
+
+    <hr>
+
+    <h2>نکات حرفه‌ای مهم</h2>
+    <ol>
+        <li class="note">همیشه از تگ‌های معنایی (semantic) مانند <code>header</code>، <code>nav</code>، <code>main</code>، <code>article</code>، <code>section</code>، <code>aside</code>، <code>footer</code> استفاده کن تا ساختار صفحه برای موتورهای جستجو و تکنولوژی‌های کمکی (Accessibility) بهتر درک شود.</li>
+        <li class="note">برای تصاویر (<code>img</code>) حتماً از ویژگی <code>alt</code> با توضیحی گویا استفاده کن. این کار برای دسترسی‌پذیری و SEO حیاتی است.</li>
+        <li class="note">هر صفحه HTML فقط باید یک تگ <code>main</code> داشته باشد تا محتوای اصلی و منحصر به فرد صفحه را مشخص کند.</li>
+        <li class="note">از تگ‌های منسوخ HTML4 (مانند <code>font</code>, <code>center</code>, <code>strike</code>) به هیچ عنوان استفاده نکن. از CSS برای استایل‌دهی استفاده کن.</li>
+        <li class="note">ساختار کد HTML خود را تمیز، خوانا و با تورفتگی (indentation) مناسب بنویس. این کار نگهداری و دیباگ کردن کد را آسان‌تر می‌کند.</li>
+        <li>از تگ <code>doctype</code> در ابتدای هر سند HTML استفاده کن.</li>
+        <li>برای ارتباط بین تگ‌ها از <code>label</code> و ویژگی <code>for</code> استفاده کن تا تجربه کاربری بهتری ایجاد شود.</li>
+        <li>از تگ <code>script</code> برای اسکریپت‌های مهم در انتهای <code>body</code> یا با ویژگی <code>defer</code> در <code>head</code> استفاده کن تا بارگذاری صفحه را کند نکند.</li>
+    </ol>
+
+    <hr>
+
+    <p>این فایل شامل تمامی تگ‌های استاندارد HTML5 است و هیچ تگ منسوخی در آن استفاده نشده است.</p>
+
+    <p>موفق باشی <span class="emoji">🚀</span></p>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section class="home">
+        <div class="home-img">
+            <img src="img/3e22db6d-ac23-4006-89c1-d3163d3722d0.jpg" alt="عکس شخصصی">
+        </div>
+        <div class="home-content">
+            <h1>سلام من <span>سورنا</span> هستم</h1>
+            <h3>من <span> برنامه نویس </span>هستم</h3>
+            <p>اینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنیداینجا یک متن نمونه است که میتوانید خود را معرفی کنید</p>
+            <div class="icon">
+                <a href="#"><i class="icon"></i></a>    
+                <a href="#"><i class="gitab"></i></a>    
+                <a href="#"><i class="twiteer"></i></a>    
+                <a href="#"><i class="instagram"></i></a>    
+            </div>
+            <a href="#" class="btn"> درباره من</a>
+        </div>
+
+    </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- <div class="header-count">
+        <h1>زیبایی های شگفت انگیز جهان را کشف کنید.</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, aperiam. Alias enim numquam eos accusantium. Sit iste blanditiis eum fugiat. Explicabo illum iure hic commodi, odit perferendis fugit sapiente aliquam?</p>
+        <a href="" class="btn">مشاهده</a>
+    </div>
+    <div class="gallery">
+        <img src="img/20190821_091107_Film2.jpg" alt="">
+        <img src="img/2024-10-10_at_12.27.12.901.jpg" alt="">
+        <img src="img/2024-10-10_at_12.27.26.184.jpg" alt="">
+        <img src="img/2024-10-10_at_12.27.29.992.jpg" alt="">
+        <img src="img/2024-10-10_at_12.27.34.993.jpg" alt="">
+        <img src="img/3e22db6d-ac23-4006-89c1-d3163d3722d0.jpg" alt="">
+        <img src="img/4f49c3f0-2107-46e1-bc55-66ce3e814835.jpg" alt="">
+        <img src="img/۲۰۲۰۰۱۲۴_۲۰۲۲۲۴.jpg" alt="">
+    </div> -->
+</body>
+</html>
