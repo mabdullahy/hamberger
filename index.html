@@ -3,11 +3,19 @@
 <html lang="en" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>hamberger🍔</title>
+
     <link rel="stylesheet" href="acss/learn.css">
+
     <!-- <link rel="stylesheet" href="main.css"> -->
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+
 </head>
 
 <body>
@@ -20,10 +28,15 @@
 
         <!-- نوار جست و جو -->
         <div class="topbar-center">
+
             <form class="search-form">
-                <input type="text" placeholder="جستجو در محصولات..." />
+
+                <input type="text" class="search-input" placeholder="جستجو در محصولات..." />
+
                 <button type="submit">🔍</button>
+
             </form>
+
         </div>
 
         <!-- آیکون سبد خرید -->
@@ -34,283 +47,574 @@
             </a>
 
             <div class="topbar-right">
-                <label for="cart-toggle" class="icon-btn" title="سبد خرید">🛒</label>
-                <script src="learn.js"></script>
+
+                <label for="cart-toggle" class="icon-btn cart-icon" title="سبد خرید">
+                    🛒
+                    <span class="cart-count">0</span>
+                </label>
+
             </div>
 
             <div class="topbar-right">
+
                 <input type="checkbox" id="menu-toggle" hidden>
+
                 <label for="menu-toggle" class="icon-btn menu-trigger" title="منو">☰</label>
 
                 <ul class="menu-items" aria-label="منو">
+
                     <li><a href="index.html">خانه</a></li>
+
                     <br>
+
                     <li><a href="call.html">تماس با من</a></li>
+
                     <br>
+
                     <li><a href="about.html">درباره من</a></li>
+
                 </ul>
+
             </div>
 
             <input type="checkbox" id="cart-toggle" class="cart-toggle">
 
             <div class="cart-modal">
+
                 <div class="cart-content">
+
                     <label for="cart-toggle" class="close-cart" title="بستن">×</label>
 
                     <h2>سبد خرید</h2>
 
-                    <ul class="cart-items">
-                        <li>محصول ۱ — 120,000 تومان</li>
-                        <li>محصول ۲ — 250,000 تومان</li>
-                        <li>محصول ۳ — 80,000 تومان</li>
-                    </ul>
+                    <ul class="cart-items"></ul>
+
+                    <p class="cart-total">
+                        مجموع خرید: <span id="cart-total-price">0</span> تومان
+                    </p>
 
                     <button type="button" class="checkout-btn">
                         نهایی کردن خرید
                     </button>
+
                 </div>
+
             </div>
 
         </div>
+
+        <div class="success-modal">
+
+            <div class="success-box">
+
+                <div class="success-icon">✓</div>
+
+                <h2>سفارش ثبت شد!</h2>
+
+                <p>سفارش شما با موفقیت ثبت شد 🥳</p>
+
+                <button class="success-close">باشه</button>
+
+            </div>
+
+        </div>
+
     </header>
 
+    <!-- دکمه های محصولات -->
+
+    <div class="categories">
+
+        <a href="#" data-category="all">🛍️ همه محصولات</a>
+
+        <a href="#" data-category="main">🍔 غذای اصلی</a>
+
+        <a href="#" data-category="appetizer">🍟 پیش‌غذا</a>
+
+        <a href="#" data-category="drink">🥤 نوشیدنی</a>
+
+        <a href="#" data-category="dessert">🍰 دسر</a>
+
+    </div>
 
     <!-- عکس های فست فود -->
+
     <div class="gallery">
 
-        <div class="photo-card">
+        <div class="photo-card" id="main-food" data-category="main">
+
+            <span class="special-badge">🔥 پیشنهاد ویژه | 30٪ تخفیف</span>
+
             <a href="learn.html#food2">
+
                 <img src="img/همبرگر.webp" alt="" title="همبرگر ویژه">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 238,000</p>
+
                 <p class="original-price">قیمت اصلی: 300,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="همبرگر ویژه" data-price="238000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food3">
+
                 <img src="img/download.jfif" alt="" title="همبرگر گوشت گاو">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 198,000</p>
+
                 <p class="original-price">قیمت اصلی: 260,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="همبرگر گوشت گاو" data-price="198000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food4">
+
                 <img src="img/images.jfif" alt="" title="پیتزا سبزیجات">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 275,000</p>
+
                 <p class="original-price">قیمت اصلی: 340,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="پیتزا سبزیجات" data-price="275000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" id="appetizers" data-category="appetizer">
+
             <a href="learn.html#food5">
+
                 <img src="img/download (4).jfif" alt="" title="سالاد سزار">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 145,000</p>
+
                 <p class="original-price">قیمت اصلی: 190,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="سالاد سزار" data-price="145000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <!-- پرفروش‌ترین‌ها -->
+
+        <section class="best-sellers">
+
+            <div class="best-sellers-title">
+
+                <h2>🔥 پرفروش‌ترین‌ها</h2>
+
+                <span>محبوب‌ترین انتخاب‌های مشتری‌ها</span>
+
+            </div>
+
+            <div class="best-sellers-wrapper">
+
+                <button class="best-sellers-btn prev" type="button">‹</button>
+
+                <div class="best-sellers-track">
+
+                    <div class="best-seller-card">
+
+                        <img src="img/همبرگر.webp" alt="همبرگر ویژه">
+
+                        <h3>همبرگر ویژه</h3>
+
+                        <p>238,000 تومان</p>
+
+                        <button type="button">+</button>
+
+                    </div>
+
+                    <div class="best-seller-card">
+
+                        <img src="img/images (8).jfif" alt="پیتزا مخلوط">
+
+                        <h3>پیتزا مخلوط</h3>
+
+                        <p>390,000 تومان</p>
+
+                        <button type="button">+</button>
+
+                    </div>
+
+                    <div class="best-seller-card">
+
+                        <img src="img/images (13).jfif" alt="بال مرغ سوخاری">
+
+                        <h3>بال مرغ سوخاری</h3>
+
+                        <p>130,000 تومان</p>
+
+                        <button type="button">+</button>
+
+                    </div>
+
+                    <div class="best-seller-card">
+
+                        <img src="img/download (2).jfif" alt="همبرگر ساده">
+
+                        <h3>همبرگر ساده</h3>
+
+                        <p>210,000 تومان</p>
+
+                        <button type="button">+</button>
+
+                    </div>
+
+                </div>
+
+                <button class="best-sellers-btn next" type="button">›</button>
+
+            </div>
+
+        </section>
+
+
+        <div class="photo-card" data-category="appetizer">
+
             <a href="learn.html#food6">
+
                 <img src="img/download (7).jfif" alt="" title="سمبوسه پیتزایی">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 120,000</p>
+
                 <p class="original-price">قیمت اصلی: 160,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="سمبوسه پیتزایی" data-price="120000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food7">
+
                 <img src="img/download (2).jfif" alt="" title="همبرگر ساده">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 210,000</p>
+
                 <p class="original-price">قیمت اصلی: 280,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="همبرگر ساده" data-price="210000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food8">
+
                 <img src="img/download (1).jfif" alt="" title="همبرگر و پیتزا مخصوص سر آشپز">
+
             </a>
 
             <div class="price-info">
+
+                <span class="special-badge">🔥 پیشنهاد ویژه | 15٪ تخفیف</span>
+
                 <p class="current-price">با تخفیف: 225,000</p>
+
                 <p class="original-price">قیمت اصلی: 290,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="همبرگر و پیتزا مخصوص سر آشپز" data-price="225000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="appetizer">
+
             <a href="learn.html#food9">
+
                 <img src="img/download (5).jfif" alt="" title="سالاد ساده">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 245,000</p>
+
                 <p class="original-price">قیمت اصلی: 310,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="سالاد ساده" data-price="245000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food10">
+
                 <img src="img/images (8).jfif" alt="" title="پیتزا مخلوت">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 390,000</p>
+
                 <p class="original-price">قیمت اصلی: 470,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="پیتزا مخلوت" data-price="390000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food11">
+
                 <img src="img/download (6).jfif" alt="" title="پیتزا سبزیجات ایتالیایی">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 155,000</p>
+
                 <p class="original-price">قیمت اصلی: 200,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="پیتزا سبزیجات ایتالیایی" data-price="155000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="main">
+
             <a href="learn.html#food12">
+
                 <img src="img/images (1).jfif" alt="" title="همبرگر خیاری">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 175,000</p>
+
                 <p class="original-price">قیمت اصلی: 230,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="همبرگر خیاری" data-price="175000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="appetizer">
+
             <a href="learn.html#food13">
+
                 <img src="img/images (12).jfif" alt="" title="سالاد کلم">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 205,000</p>
+
                 <p class="original-price">قیمت اصلی: 270,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="سالاد کلم" data-price="205000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="appetizer">
+
             <a href="learn.html#food14">
+
                 <img src="img/images (13).jfif" alt="" title="بال مرغ سوخاری">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 130,000</p>
+
                 <p class="original-price">قیمت اصلی: 170,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="بال مرغ سوخاری" data-price="130000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="appetizer">
+
+            <span class="special-badge">🔥 پیشنهاد ویژه | 30٪ تخفیف</span>
+
             <a href="learn.html#food15">
+
                 <img src="img/images (14).jfif" alt="" title="قارچ سوخاری">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 165,000</p>
+
                 <p class="original-price">قیمت اصلی: 215,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="قارچ سوخاری" data-price="165000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="appetizer">
+
+            <span class="special-badge">🔥 پیشنهاد ویژه | 20٪ تخفیف</span>
+
             <a href="learn.html#food16">
+
                 <img src="img/images (15).jfif" alt="" title="ران مرغ سوخاری">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 185,000</p>
+
                 <p class="original-price">قیمت اصلی: 240,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="ران مرغ سوخاری" data-price="185000">+</button>
+
             </div>
+
         </div>
 
-        <div class="photo-card">
+
+        <div class="photo-card" data-category="appetizer">
+
             <a href="learn.html#food17">
+
                 <img src="img/images (16).jfif" alt="" title="سالاد کلم">
+
             </a>
 
             <div class="price-info">
+
                 <p class="current-price">با تخفیف: 215,000</p>
+
                 <p class="original-price">قیمت اصلی: 275,000</p>
-                <button class="btn">+</button>
+
+                <button class="btn" data-name="سالاد کلم ۲" data-price="215000">+</button>
+
             </div>
+
         </div>
 
     </div>
 
+
     <script>
+
         function toggleMenu() {
+
             document.getElementById("menu").classList.toggle("show");
+
         }
+
     </script>
 
-    <footer class="footerbar">
 
-        <div class="footerbar-content">
+  <footer class="footerbar">
 
-            <div class="footer-section">
-                <!-- شماره تماس -->
-                <h3>شماره تماس</h3>
-                <p><a href="tel:09981966067">09981966067</a></p>
+    <div class="footerbar-content">
 
-                <h3>ایمیل</h3>
-                <p>sm.abdollahi0625@gmail.com</p>
-            </div>
-
-            <div class="footer-section">
-                <!--آیدی-->
-                <h3>آیدی من در تلگرام</h3>
-                <p>@MH-MH-MoHa</p>
-            </div>
-
-            <!-- بخش نظرات -->
-            <div class="footer-section">
-                <h3>نظرات مشتریان</h3>
-                <p>نظر شما برای ما ارزشمند است.</p>
-                <br>
-                <a class="a" href="about.html">درباره ما</a>
-            </div>
-
+        <div class="footer-section">
+            <h3>🍔 Mohammad Shop</h3>
+            <p>طعم خوب، انتخاب خوب، تجربه‌ای متفاوت.</p>
         </div>
 
-    </footer>
+        <div class="footer-section">
+            <h3>ارتباط با ما</h3>
+            <p>📞 <a href="tel:09981966067">09981966067</a></p>
+            <p>📧 sm.abdollahi0625@gmail.com</p>
+            <p>💬 @MH-MH-MoHa</p>
+        </div>
 
-    <!-- فلش رو به بالا -->
+        <div class="footer-section">
+            <h3>دسترسی سریع</h3>
+            <a href="index.html">خانه</a>
+            <a href="about.html">درباره ما</a>
+            <a href="call.html">تماس با ما</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>نظرات مشتریان</h3>
+            <p>نظر شما برای ما ارزشمند است ❤️</p>
+            <a class="footer-btn" href="about.html">درباره ما</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Mohammad Shop | تمامی حقوق محفوظ است.</p>
+    </div>
+
+</footer>
+
+    <!--فلش رو به بالا-->
+
     <a href="#" class="scroll-top">↑</a>
+
+    <script src="learn.js"></script>
 
 </body>
 
